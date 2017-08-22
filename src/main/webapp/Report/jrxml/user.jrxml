@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report246" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="ireport.callouts" value="##Sun Oct 09 12:33:55 CST 2016"/>
+	<style name="def" isDefault="true" hAlign="Center" vAlign="Middle" isBlankWhenNull="true" fontName="宋体">
+		<box>
+			<topPen lineWidth="0.5" lineColor="#999999"/>
+			<leftPen lineWidth="0.5" lineColor="#999999"/>
+			<bottomPen lineWidth="0.5" lineColor="#999999"/>
+			<rightPen lineWidth="0.5" lineColor="#999999"/>
+		</box>
+	</style>
+	<style name="header" style="def" mode="Opaque" forecolor="#000000" backcolor="#CCCCCC"/>
+	<style name="link" mode="Transparent" hAlign="Center" vAlign="Middle"/>
+	<parameter name="format" class="java.lang.String">
+		<defaultValueExpression><![CDATA["htm"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="size" class="java.lang.Integer" isForPrompting="false">
+		<defaultValueExpression><![CDATA[3]]></defaultValueExpression>
+	</parameter>
+	<parameter name="index" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[1]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select id as id,
+                        name as name,
+                        password as password,
+                        createTime as createTime,
+                        expireTime as expireTime from user]]>
+	</queryString>
+	<field name="id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="password" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="createTime" class="java.util.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="expireTime" class="java.util.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="19" y="13" width="510" height="38" backcolor="#009999"/>
+				<textElement>
+					<font isBold="true" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[用户信息报表]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="header" x="19" y="51" width="102" height="28"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[用户ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="header" x="121" y="51" width="102" height="28"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[用户名]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="header" x="223" y="51" width="102" height="28"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[密码]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="header" x="325" y="51" width="102" height="28"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[注册时间]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="header" x="427" y="51" width="102" height="28"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[确认时间]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="28" splitType="Stretch">
+			<textField>
+				<reportElement x="19" y="0" width="102" height="28"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="121" y="0" width="102" height="28"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="223" y="0" width="102" height="28"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{password}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="325" y="0" width="102" height="28"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{createTime}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="427" y="0" width="102" height="28"/>
+				<textElement>
+					<font pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{expireTime}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<summary>
+		<band height="70" splitType="Stretch">
+			<textField hyperlinkType="Reference">
+				<reportElement style="link" x="465" y="20" width="64" height="20" forecolor="#0000FF"/>
+				<textElement/>
+				<textFieldExpression><![CDATA["导出Excel"]]></textFieldExpression>
+				<hyperlinkReferenceExpression><![CDATA["user.action?" +
+                                                    "&format=xls"]]></hyperlinkReferenceExpression>
+			</textField>
+			<textField hyperlinkType="Reference">
+				<reportElement style="link" x="401" y="20" width="64" height="20" forecolor="#0000FF"/>
+				<textElement/>
+				<textFieldExpression><![CDATA["导出PDF"]]></textFieldExpression>
+				<hyperlinkReferenceExpression><![CDATA["user.action?" +
+                                                    "&format=pdf"]]></hyperlinkReferenceExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
